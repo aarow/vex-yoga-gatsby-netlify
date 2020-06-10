@@ -2,6 +2,8 @@ backend:
   name: git-gateway
   branch: master
 
+site_url: https://vexyoga-2020.netlify.app
+
 media_folder: static/img
 public_folder: /img
 
@@ -21,3 +23,34 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "team-member"
+    label: "Team Member"
+    folder: "content/team-members"
+    create: true
+    slug: "team-member"
+    media_folder: ""
+    public_folder: ""
+    path: "{{name}}/index"
+    editor:
+      preview: false
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Photo", name: "photo", widget: "image" }
+      - { label: "Bio", name: "bio", widget: "markdown" }
+
+  - name: "class"
+    label: "Class"
+    folder: "content/classes"
+    create: true
+    slug: "class"
+    media_folder: ""
+    public_folder: ""
+    path: "{{name}}/index"
+    editor:
+      preview: false
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Photo", name: "photo", widget: "image" }
+      - { label: "Description", name: "description", widget: "markdown" }
